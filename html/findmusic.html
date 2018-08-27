@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+#
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Music Collab Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  
+
+  <body>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="index.html" style="font-size:20">Music Collab Project</a>
+        <a class="py-2 d-none d-md-inline-block" href="playsong.html">Listen</a>
+<a class="py-2 d-none d-md-inline-block" href="findmusic.html">Find Music</a>
+        <a class="py-2 d-none d-md-inline-block" href="collaborate.html">Collaborate</a>
+        <a class="py-2 d-none d-md-inline-block" href="insertfile.html">Create Something New</a>
+       <a class="py-2 d-none d-md-inline-block" href="deleteuser.html">Delete User</a>
+       <a class="py-2 d-none d-md-inline-block" href="php/playclip.php">Play Clip</a>
+
+        </div>
+    </nav>
+
+
+
+
+
+
+<p> <br><br><br><br><br> </p>
+
+    <form class="form-findbyuser" action="php/findbyuser.php" method="post">
+      <h1 class="h3 mb-3 font-weight-normal">Know someone you like?</h1>
+      <label for="inputusername" class="sr-only">Artist</label>
+      <input type="text" name="inputUname" class="form-control" placeholder="Artist Name" required="" autofocus="">
+      <button class="btn btn-lg btn-primary btn-block" type="submit" value="Submit">Find by Artist</button>
+    </form>
+    
+	<p>
+You will get query results if u insert the following usernames(case specific)<br>
+| uid | username        |<br>
+|   1 | Steven Sung     |<br>
+|   2 | Gaige Spencer   |<br>
+|   3 | Kshithij Kamal  |<br>
+|   4 | Andy Woodruff   |<br>
+|   5 | John Doe        |<br>
+|   6 | Lorcan Reynolds |<br>
+|   7 | Ibrahim Robins  |<br>
+|   8 | Kevin Durant    |<br>
+|   9 | LeBron James    |<br>
+|  10 | Stephen Curry   |<br>
+
+ </p>    
+    
+    
+    
+    <p><br></p>
+
+    
+    
+    
+    
+    
+    
+    <form class="form-findbySong" action="php/findbysongname.php" method="post">
+      <h1 class="h3 mb-3 font-weight-normal">Looking for something particular?</h1>
+      <label for="inputsongname" class="sr-only">Song</label>
+      <input type="text" name="inputSname" class="form-control" placeholder="Song Name" required="" autofocus= "">
+      <button class="btn btn-lg btn-primary btn-block" type="submit" value="Submit">Find by Song</button>
+      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    </form>
+
+	<p>
+You will get query results if u insert the following song titles(case specific)<br>
++--------+------------------+<br>
+| songid | title            |<br>
++--------+------------------+<br>
+|      1 | Survival         |<br>
+|      2 | Nonstop          |<br>
+|      3 | Elevate          |<br>
+|      4 | Emotionless      |<br>
+|      5 | Gods Plan        |<br>
+|      6 | Im Upset         |<br>
+|      7 | 8 Out of 10      |<br>
+|      8 | Mob Ties         |<br>
+|      9 | Cant Take a Joke |<br>
+|     10 | Sandras Rose     |<br>
++--------+------------------+<br>
+
+ </p>    
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  
+
+</body>
+</html>
+
+
+

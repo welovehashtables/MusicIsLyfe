@@ -1,0 +1,61 @@
+<html>
+
+          <head>
+                  <title>NetID Info</title>
+        </head>
+
+        <body>
+
+                  <?php
+                        $uname = $_POST['uname'];
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "cs411";
+
+                        $conn = new mysqli($servername, $username, $password, $dbname, 65536);
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+                        echo "Connected successfully<br>";
+
+			
+			
+
+                       # $sql = "DELETE User, Collaborates, Clip
+			# FROM (User INNER JOIN Collaborates
+			#ON User.userID = Collaborates.userID)
+			#INNER JOIN Clip ON Clip.ownerID = User.userID
+			#WHERE User.Username = '$uname'";
+
+			$sql = "DELETE 
+				from User
+				where Username = '$uname'";
+
+			$clips = mysql_query("SELECT Clip.clipID
+				FROM User, Clip
+				WHERE User.Username = '$uname' AND Clip.ownerID = User.userID");
+
+			while($row = mysql_fetch_assoc($clips)){
+			unlink
+			
+			}
+
+                        $result = $conn->query($sql);
+
+			if($result == TRUE)
+			{
+				echo "Success<br>";
+			}
+			else
+			{
+				echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
+			}
+
+
+                        $conn->close();
+                ?>
+
+        </body>
+</html>
+
